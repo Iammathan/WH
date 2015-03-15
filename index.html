@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+ <link href="./favicon.ico" rel="SHORTCUT ICON">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+ <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" >
+ <meta name="description" content="WorkHTML helps you to improve your business by developing a unique responsive web design. We offer psd to html/email, psd to wordpress and website revamp.">
+
+ <!--<meta content="WorkHTML helps you to improve your business by developing a unique responsive web design. We provide psd to responsive html/email and wordpress development services." name="description" >
+    
+    <meta content="psd to responsive html/email, unique responsive web design, wordpress development, workhtml, website revamp, email templates, 
+work html" name="keywords" >
+
+
+
+<meta name="robots" content="NOODP" >-->
+ <title>WorkHTML - PSD to Responsive HTML/EMAIL Design | WordPress Development</title>
+ <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css" >
+ <link href="./index.css" rel="stylesheet" type="text/css" >
+ <script type="text/javascript" src="./js/vendor/jquery-1.7.2.js"></script>
+ <script>
+ 	/*$(document).ready(function(e) {
+        $('.banner-container').css({'height':window.innerHeight})
+    });*/
+ </script>
+ <!-- <script type="text/javascript" src="./js/ease.js"></script>
+-->
+ <!--<script type="text/javascript">
+ // DROPDOWN SCRIPTS //
+ $(document).ready(function(e) {
+        
+ $('.highliter li').click(function(){
+   $(this).addClass("selected").siblings().removeClass("selected");
+   });
+  var count=0;
+  var k=0;
+  var higliteLink=0;
+   higliteLink= $('.items-container')[0].children;
+   $('body').click(function(e){
+   ids=e.target.id;
+   if(ids=='selector' || ids == 'dropdown-icon')
+   {
+   count+=1;
+   if(count%2==1){
+    var child =$('.items-container').children().length;
+    var firstChildheight=$('.items-container li').height();
+    for (j=1;j <= child;j++)
+    { k+=firstChildheight;
+     $(higliteLink[j-1]).animate({
+      top:k,
+      },500)
+     }
+   } 
+   else
+   {
+    k=0;
+    var child =$('.items-container').children().length;
+    for (i=child;i>=1;i--)
+    {
+     $(higliteLink[i-1]).animate({
+      top:k,
+      },500)
+     $('.items-container li span').css({'background':'#fff','color':'#bcbcbc'})  
+     }   
+   }
+    
+   
+  }
+  
+  else
+  {
+   count=0;
+   k=0;
+    var child =$('.items-container').children().length;
+    for (i=child;i>=1;i--)
+    {
+     //console.log(child,k,i) 
+     $(higliteLink[i-1]).animate({
+      top:k,
+      },500)
+     $('.items-container li span').css({'background':'#fff','color':'#bcbcbc'})  
+     }  
+  }
+   })
+  
+  
+  
+  $(document).on('keydown',function(e){
+    keys=e.which;
+    if(keys==27)
+        {
+        count=0;
+   k=0;
+    var child =$('.items-container').children().length;
+    for (i=child;i>=1;i--)
+    {
+    // console.log(child,k,i) 
+     $(higliteLink[i-1]).animate({
+      top:k,
+      },500)
+     $('.items-container li span').css({'background':'#fff','color':'#bcbcbc'})  
+     } 
+        }
+    })   
+  
+   
+    
+   $('.highliter li').click(function(){
+    k=0;
+    var child =$('.items-container').children().length;
+    for (i=child;i>=1;i--)
+    {
+    // console.log(child,k,i) 
+     $(higliteLink[i-1]).animate({
+      top:k,
+      },500)
+     $('.items-container li span').css({'background':'#fff','color':'#bcbcbc'})  
+     } 
+   })
+   
+   $('.items-container li').mouseover(function(){
+    var getIndex=$('.items-container li').parent().children().index(this);
+    var childLength=$('.items-container li').length;
+    
+    for(i=0;i <= childLength;i++)
+     {
+     if(getIndex==i)
+     {
+      $('.items-container span:eq('+(i)+')').css({'background':'#fff','color':'#fff'});
+      //console.log(i)
+     }
+     else
+     {
+      $('.items-container span:eq('+(i)+')').css({'background':'#fff','color':'#bcbcbc'});
+     }
+    }
+   })
+   
+   $('.down, .notifyMe').click(function(){
+     $('html,body').scrollTo("#notifyme", "#notifyme"); 
+     //document.forms["Notify"]["Email"].focus();
+   })
+   
+   
+   
+     });
+  
+</script>
+-->
+
+ <!--<script>
+
+
+	$(document).ready(function(e) {
+		//$('.banner-container').css({'height':window.innerHeight});
+		var index;
+		var getSection=$('.bodySection');
+		var menuChild=$('.manu-part').children();
+		var docHeight;
+		var whTop=$('#wh-services').offset().top;
+		var testmonialTop=$('#testimonial').offset().top;
+		var getscrollpreVal=0;
+		var k=[];
+		thisClick=false;
+		 clicked='notclick'
+		var headerH=$('.header').innerHeight();
+		
+		for(i=0;i<getSection.length;i++)
+		{
+			k[i]=$(getSection[i]).offset().top;
+			
+		}
+		
+		var getUrl=window.location.hash;
+		getUrl=getUrl.replace('#','');
+		console.log(getUrl);
+		var hasVal=$('#wh-'+getUrl).offset().top-headerH;
+		
+		
+		clickformOther(hasVal);
+		
+		$(window).resize(function(e) {
+            for(i=0;i<getSection.length;i++)
+		{
+			k[i]=$(getSection[i]).offset().top;
+			console.log(k[i]);
+		}
+        });
+		
+		$('.manu-part li a').bind('click',function(event){
+			thisClick=true;
+		var $anchor = $(this);
+                    
+		$('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+        }, 2000,'easeInOutExpo',function(){
+					if(!$(this).is('animated')){
+						
+						clicked='notclick';
+						$('.header').css({'transform':'translateY(-70px)'});
+						//	$('.header').css({'transform':'translateY(-70px)'});
+					}})
+		event.preventDefault();
+		})
+		
+       $('.manu-part li').click(function(e){	//menu link clicked
+			e.preventDefault();
+			
+			clicked='clicked';
+			index=$(this).index();
+			$(this).addClass('select').siblings().removeClass('select');
+			
+			thisClick=true;
+			
+			moveSection(index,getSection,k);														//go to section
+		})
+		
+		/* select the section when particular secton comes top*/
+		$(window).scroll(function(){
+			var sTop=$(window).scrollTop()+$('.header').innerHeight();
+			if(sTop>getscrollpreVal){
+				getscrollpreVal=sTop;
+				thisClick=false;
+				//console.log('top',sTop)
+				$('.header').css({'transform':'translateY(-70px)'});
+			}
+			
+			else if(sTop>whTop && sTop<testmonialTop){
+				$('.header').css({'transform':'translateY(0)'});
+			}
+			else{
+				getscrollpreVal=sTop;
+				thisClick=true;
+				if(sTop>0 && sTop<whTop)
+				{
+					$('.header').css({'transform':'translateY(-70px)'});
+				}
+				else{
+					thisClick=false;
+					if(thisClick==true)
+					{
+						console.log('i am 0000000000')
+					$('.header').css({'transform':'translateY(0px)'});
+					}
+					else
+					{
+						console.log('i am 1111111')
+						$('.header').css({'transform':'translateY(-70px)'});
+					}
+				}
+			}
+			if(clicked=='clicked')
+			{
+				$('.header').css({'transform':'translateY(-70px)'});
+				}
+			else
+			{
+				console.log('I am last');
+				
+				for(j=0;j<=k.length;j++)
+				{
+					if(sTop>=k[j] && sTop <k[j+1])
+						{
+							
+							$(menuChild[j]).addClass('select').siblings().removeClass('select');
+							$(menuChild[j+(k.length)]).addClass('select').siblings().removeClass('select');
+						}
+						else if(sTop>=k[k.length-1])
+						{
+							$(menuChild[k.length-1]).addClass('select').siblings().removeClass('select');
+							$(menuChild[k.length-1+(k.length)]).addClass('select').siblings().removeClass('select');
+						}
+						
+				}
+					
+			}
+	})	
+	
+	
+    });
+	
+	function moveSection(index,getSection,k){
+		console.log('clicked',k[index])
+		
+		$("html, body").animate({ 
+				scrollTop:k[index]
+				},1500 ,"easeInOutExpo",function(){
+					if(!$(this).is('animated')){
+						setTimeout(function(){
+						clicked='notclick';
+						},600)
+					}
+				})
+	}
+	
+	function clickformOther(hasVal){
+		console.log('get',hasVal)
+		$(window).scrollTop(hasVal);
+	}
+
+// JavaScript Document
+</script>
+-->
+ </head>
+<!-- <script>
+	$(document).ready(function(e) {
+        getAllSec();
+		
+		$('.manu-part li').click(function(e){
+			e.preventDefault();
+			clicked=true;
+			getIndex=$(this).index();
+			
+			if(getIndex==1)
+			{
+				 minuHead=allTops[1]+60;
+				 
+			}
+			else
+			{
+				minuHead=allTops[getIndex]
+			}
+			//minuHead=allTops[getIndex];
+			$('html, body').stop().animate({
+				scrollTop:minuHead, 
+			}, 2000,'easeInOutExpo',function(){
+					if(!$(this).is('animated')){
+						clicked=false;
+						
+							//$('.header').css({'top':0});
+						
+					}
+			})
+		})
+		
+		 $(window).scroll(function(){
+			 if(clicked==true)
+			 {
+				}
+				else{
+				
+		 	var sTop=$(window).scrollTop();
+				for(j=0;j<=allTops.length;j++)
+					{
+						if(sTop>=allTops[j] && sTop <allTops[j+1])
+							{
+								$(allNav[j]).addClass('select').siblings().removeClass('select');
+								}
+						else if(sTop>=allTops[allTops.length-1])
+							{
+								$(allNav[j]).addClass('select').siblings().removeClass('select');
+							}
+						
+						
+					}
+					
+				
+				}
+				if((allTops[1])<sTop){
+					
+					$('.header').css({'top':0});
+				}
+				else{
+					$('.header').css({'top':-70});
+				}
+				
+		 })
+		
+    });
+	function getAllSec(){
+			clicked=false;
+			 allTops=[];
+			 getAllSec=$('.bodySection');
+			// allSec=$('.main').children();
+			 allNav=$('.manu-part').children();
+			 navTxt=$('.faq-categary-nav-text').children();
+			for(i=0;i<getAllSec.length;i++){
+				allTops[i]=$(getAllSec[i]).offset().top-$('.header').innerHeight();
+				//console.log(allTops,allTops.length);
+			}
+		}
+	
+</script>
+-->
+ <body>
+<div class="header"> <a href="index.html" class="logo"></a>
+   <ul class="menu-list manu-part" id="menus">
+    <li id="d/home"class="select"><a href="#wh-home">HOME</a></li>
+    <li id="d/services"><a href="#wh-services">SERVICES</a></li>
+    <li id="d/plan"><a href="#wh-plan">PRICING</a></li>
+    <li id="d/contact"><a href="#wh-contact">CONTACT US</a></li>
+  </ul>
+   <div class="dropdown"> <span class="selecter" id="selector"><img src="images/dropdown-icon.png" id="dropdown-icon" alt="dropdown icon" /> </span>
+    <ul class="items-container manu-part">
+       <li id="m/home" class="select" style="z-index: 1004; top: 0px; left: 0px; position: absolute;"><a href="#home" >HOME</a></li>
+       <li id="m/services" style="z-index: 1003; top: 0px; left: 0px; position: absolute;"><a href="#service">SERVICES</a></li>
+       <li id="m/plan" style="z-index: 1002; top: 0px; left: 0px; position: absolute;"><a href="#ourworks">PRICING</a></li>
+       <li id="m/contact" style="z-index: 1000; top: 0px; left: 0px; position: absolute;"><a href="#contactus">CONTACT US</a></li>
+     </ul>
+  </div>
+ </div>
+
+<!-- HEADER Section END-->
+<div class="main bodySection" id="wh-home"> 
+   <!-- BANNER Section START-->
+   
+   <div class="banner-container" >
+    <div class="banner-inner">
+       <div class="right-part">
+        <h1>We design the design</h1>
+        <p>We see millions of common website around the web.</p>
+        <p> Need a unique responsive website? send us your requirements and get more than what you expect.</p>
+        <div class="ordernow"><a href="wordpress.html"> Order Now</a></div>
+      </div>
+       <div class="left-part"> <img src="images/ban-4.png" alt="banner"/> </div>
+     </div>
+  </div>
+ </div>
+
+<!-- BANNER Section END--> 
+
+<!--promiting section1 START 
+<div class="blueBg  add-bg" id="wh-promote">
+   <div class="section">
+    <div class="ordernow"><a href="psdtohtml.html"> Try Now</a></div>
+  </div>
+ </div>
+<!--promiting section1 END -----> 
+
+<!-- What we do START-->
+<div class="whiteBg bodySection " id="wh-services">
+   <div class="section">
+    <h2>What we do</h2>
+    <p class="discript">We create and customize website based on your needs and never compromise our quality.</p>
+    <ul class="grid">
+       <li> <a href="wordpress-development.html">
+         <div class="iconLeft wp"></div>
+         </a>
+        <div class="fContent">
+           <h3><a href="wordpress-development.html">WordPress Development</a></h3>
+           <p>WordPress is a simple blog with limited templates. Repetition of same design is very common. Our designers customize your WordPress page and give a unique look with all your widgets and functionalities.</p>
+         </div>
+      </li>
+       <li> <a href="psd-to-html-conversion.html">
+         <div class="iconLeft psd-html"></div>
+         </a>
+        <div class="fContent">
+           <h3><a href="psd-to-html-conversion.html">PSD to HTML</a></h3>
+           <p>Get your ideas transform into a real website. Send us your requirements in PSD format(also accept any common formats). We will build the website with all your detailing and make it a picture-perfect.</p>
+         </div>
+      </li>
+       <li> <a href="web-design.html">
+         <div class="iconLeft wh"></div>
+         </a>
+        <div class="fContent">
+           <h3><a href="web-design.html">Website Designing</a></h3>
+           <p>Our creative team knows the latest technology. Don't you have a website ? kindly share the way you want your website. We will build which will surely help you to improve your business. We also do website revamp/redesign. </p>
+         </div>
+      </li>
+       <li> <a href="#">
+         <div class="iconLeft psd-email-icon"></div>
+         </a>
+        <div class="fContent">
+           <h3><a href="#">PSD to Email Templates</a></h3>
+           <p>Need a newsletter to promote  your business? just send us your requirements in any common format we will convert into email template which supports all email clients. </p>
+         </div>
+      </li>
+     </ul>
+  </div>
+ </div>
+<!-- What we do END--> 
+
+<!--Testrimonial START-->
+
+<div id="testimonial" class="blueBg " >
+   <div class="section">
+    <h2>WHAT OUR CLIENTS SAY ABOUT US</h2>
+    <div class="testimonial-container">
+    <img src="images/way2source.png"/ >
+       <div class="tml-content"> 
+        <p>The service your company provides is top queality-from initial request for info and proposal to the execution of the activity and de-berif.The website looks great and everyone is very pleased with it.Thank you very much for your hardwork and patience getting this completed.</p>
+      </div>
+     </div>
+  </div>
+ </div>
+
+<!--Testrimonial END--> 
+
+<!-- Self promot START -->
+
+<div class="whiteBg bodySection"	id="wh-plan" >
+   <div class="section">
+    <h2>ORDER YOUR SERVICE</h2>
+    <ul class="self-promot">
+       <li class="pln-col">
+        <div class="pricing-pln">
+           <div class="price">
+            <p class="price-inText">PSD TO HTML</p>
+            <div class="price-holder"> <sup class="doler">$</sup> <span class="val">80 </span>
+               <p class="forthis">/page</p>
+             </div>
+          </div>
+         </div>
+          <div class="viewMore"><a href="psdtohtml.html">order now</a></div>
+      </li>
+       <li class="pln-col">
+        <div class="pricing-pln">
+           <div class="price">
+            <p class="price-inText">PSD TO MAIL</p>
+            <div class="price-holder"> <sup class="doler">$</sup> <span class="val">35 </span>
+               <p class="forthis">/template</p>
+             </div>
+          </div>
+         </div>
+         <div class="viewMore"><a href="psdtohtml.html">order now</a></div>
+        
+      </li>
+       <li class="pln-col">
+        <div class="pricing-pln">
+           <div class="price">
+            <p class="price-inText">WEBDESIGN</p>
+            <div class="price-holder"> <sup class="doler">$</sup> <span class="val">35 </span>
+               <p class="forthis">/page</p>
+             </div>
+          </div>
+         </div>
+         <div class="viewMore"><a href="psdtohtml.html">order now</a></div>
+        
+      </li>
+       <li class="pln-col">
+        <div class="pricing-pln">
+           <div class="price">
+            <p class="price-inText">WORDPRESS</p>
+            <div class="price-holder"> <sup class="doler">$</sup> <span class="val">25</span>
+            <p class="forthis">start from</p>
+             </div>
+          </div>
+         </div>
+         <div class="viewMore"><a href="psdtohtml.html">order now</a></div>
+        
+      </li>
+     </ul>
+  </div>
+ </div>
+<!-- self promot END --> 
+
+<!--Contact START-->
+
+<div class="blueBg bodySection" id="wh-contact">
+   <div class="section">
+    <h2>contact us</h2>
+    <p class="discript">Feel free to contact us, if you have any queries about our services.</p>
+    <div class="testimonial-container">
+       <div class="whcontactForm-content"> 
+        <!--<p class="cnt-head discript">Tell us your business needs</p>-->
+        <form autocomplete="off" novalidate action="" id="contactusform" method="post">
+           <div class="wh-contactus"> <span class="field">Name </span>
+            <input type="text" class="name" name="name">
+            <span class="field">Email </span>
+            <input type="text" class="name" name="name">
+            <span class="field">Your queries...</span>
+            <textarea rows="3" cols="50" name="comment" form="usrform"></textarea>
+          </div>
+           <div class="viewMoreContect"><a href="psdtohtml.html">SUBMIT</a></div>
+         </form>
+      </div>
+     </div>
+  </div>
+ </div>
+
+<!--Contact END--> 
+
+<!--CONTACT US START--> 
+<!--<div class="whiteBg bodySection" >
+    	<div class="section">
+        	<h2><span>Get a </span>responsive website now!</h2>
+            <ul class="contact-inner">
+                <li class="forms-cont-left">
+               		 <div class="leftcontact-info">
+                        <h5>Don't need to wait until our website release. </h5>
+                        <em></em>
+                        <p> Just send us your requirements and we will get back to you immediately.</p>
+                    </div>
+                </li>
+                
+                <li class="forms-cont-right">
+                    <div>
+                        <div id="Form">
+                        
+                            <h1>Tell us your business need</h1>
+                            
+                            
+                            <div class="form-area">
+                                <div class="form-inputs">
+                                  <p>
+                                    <input type="text" placeholder="Name"  name="Name" id="Input-Name"/>
+                                  </p>
+                                  
+                                  <p>
+                                    <input type="text" placeholder="Email"  name="Email" id="Input-Email"/>
+                                  </p>
+                                 
+                                     <p class="comments-area">
+                                      <textarea rows="1" placeholder="Type your needs..."  type="text" name="businessneed" id="businessneed"></textarea>
+                                    </p>
+                                	<p>
+                                    	<button class="left" onClick="validateContact();" id="conBtn">Get Touch</button>
+                                    </p>
+                                </div>
+                            
+                            </div>
+                            
+                   		</div>
+                    </div>
+                </li>
+            </ul>
+		</div>
+</div>	
+--> 
+<!--CONTACT US END--> 
+
+<!--SHARE PART START--> 
+<!--<div class="blueBg bodySection" >
+    	<div class="section">
+
+                    <h2>Say Hello!</h2>
+                    <p class="discript">Go Social... Connect with us via popular social channels.</p>
+
+
+                    <div class="container" id="set-8">
+
+						<ul class="hi-icon-wrap hi-icon-effect-8">
+                        	<li class="linkin"> <a href="https://www.linkedin.com/company/workhtml" target="_blank" class="hi-icon hi-icon-archive"></a></li>
+                            <li class="twitter"> <a href="https://twitter.com/workhtml" class="hi-icon hi-icon-archive" target="_blank"></a></li>
+                            <li class="facebook"> <a href="https://www.facebook.com/workhtml" class="hi-icon hi-icon-archive" target="_blank"></a></li>
+                            <li class="gplus"> <a href="https://plus.google.com/+Workhtml/" target="_blank" class="hi-icon hi-icon-archive"></a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+--><!--SHARE PART END--> 
+
+<!-- promoting order now START -->
+<div class="brandBg " >
+   <div class="section">
+    <div class="selfPro">
+       <h2 class="ordernows">We create beautiful website for your business.</h2>
+     </div>
+    <!--<div class="viewMore"><a href="psdtohtml.html">order now</a></div>-->
+    <div class="ordernow"><a href="psdtohtml.html">Order Now</a></div>
+  </div>
+ </div>
+
+<!-- promoting order now END --> 
+
+<!-- FOOTER PART START-->
+<div class="footer">
+   <div class="footer-links">
+    <ul>
+       <li>services</li>
+       <li><a href="wordpress-development.html">WordPress Development </a></li>
+       <li><a href="psd-to-html-conversion.html">PSD to HTML Conversion</a></li>
+       <li><a href="web-design.html">Website Design/Revamp </a></li>
+       <li><a href="web-hosting.html">Web Hosting </a></li>
+     </ul>
+    <ul>
+       <li>Resources</li>
+       <li><a href="wh-blog.html">Blog </a></li>
+       <li><a href="aboutus.html">About Us </a></li>
+       <li><a href="index.html#contact">Contact Us </a></li>
+       <li><a href="faq.html">FAQ </a></li>
+       <li><a href="privacy-policy.html">Privacy Policy </a></li>
+       <li><a href="terms-conditions.html">Terms & Conditions </a></li>
+     </ul>
+    <ul>
+       <li>social</li>
+       <li><a href="https://www.facebook.com/workhtml"><span class="fb"></span>Facebook</a></li>
+       <li><a href="https://twitter.com/workhtml"><span class="tw"></span>Twitter</a></li>
+       <li><a href="https://www.linkedin.com/company/workhtml"><span class="li"></span>Linkedin</a></li>
+       <li><a href="https://plus.google.com/+Workhtml/"><span class="go"></span>Google plus</a></li>
+     </ul>
+  </div>
+   <div class="licence">&copy; 2014, WorkHTML. All Rights Reserved. </div>
+ </div>
+<!-- FOOTER PART END --> 
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46660645-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
