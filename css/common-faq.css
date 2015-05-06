@@ -610,7 +610,7 @@ input:focus, input.filled {
 	
 }
 .aboutus li{
-	min-height:250px;
+	min-height:200px;
 	padding:40px 4%;
 	transition:.5s ease;
 	-moz-transition:.5s ease;
@@ -621,29 +621,21 @@ input:focus, input.filled {
 	text-align:center;
 }
 
-/*.webd-feature li:first-child, .webd-feature li:first-child + li, .webd-feature li:first-child + li + li,.aboutus li:first-child, .aboutus li:first-child + li, .aboutus li:first-child + li + li {
-    padding-top: 0;
-}
-*/
 
-.aboutus li:first-child,.aboutus li:first-child + li ,.aboutus li:first-child + li +li{
+.aboutus li.borderTop{
 	border-top:2px solid #f2f2f2;
 }
-.aboutus li:first-child,.aboutus li:first-child + li +li + li  ,.aboutus li:first-child + li +li + li + li + li + li {
+.aboutus li.noborderLeft{
 	border-left:2px solid #f2f2f2;
 }
 
-.aboutus li:first-child + li +li + li + li + li + li + li + li + li{
-	border-bottom:0;
-}
-
-.aboutus li:first-child + li +li + li + li + li + li + li + li + li {
-	border-left:2px solid #f2f2f2;
-	border-bottom:2px solid #f2f2f2;
+.aboutus li#p7{
+	margin-left: 33.2%;
+	border-left: 2px solid #f2f2f2;
 }
 
 .webd-feature li span,.aboutus li span {
-	   display: block;
+	  display: block;
     margin: 0 0 15px;
     min-height: 55px;
     min-width: 40px;
@@ -969,6 +961,22 @@ input, textarea{
     max-width: 80%;
 }
 
+/* this is for aboutus */
+.aboutus li{
+	width:41%;
+}
+
+.aboutus li#p3{
+	border-left: 2px solid #f2f2f2;
+    border-right: 0 none;
+    border-top: 0 none;
+}
+.aboutus li#p5{
+	border-left: 2px solid #f2f2f2;
+}
+.aboutus li#p7{
+	margin-left: 25%;
+	border-left: 2px solid #f2f2f2;
 }
 
 @media screen and (max-width:780px) {
@@ -1001,7 +1009,28 @@ h1 {
     line-height: 38px;
 }
 
-/* footer section */
+/* this is for aboutus */
+.aboutus li{
+    float: none;
+    width: 91%;
+}
+
+.aboutus li#p2 {
+    border-left: 2px solid #f2f2f2;
+    border-top: none;
+}
+.aboutus li#p4 {
+    border-right: 2px solid #f2f2f2;
+}
+.aboutus li#p6 {
+    border-left: 2px solid #f2f2f2;
+}
+
+.aboutus li#p7 {
+	margin-left:0;
+} 
+
+/*footer section */
 	
 .footer-links ul,.footer-links ul:nth-child(3){
 	float: none;
@@ -1030,8 +1059,9 @@ h1 {
 }
 
 @media screen and (max-width:480px) {
-.faq-info {
+.discript, .faq-info {
     font-size: 14px;
+	line-height:22px;
 }
 .pull-up-nav {
 	width: 35px;
