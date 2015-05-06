@@ -401,7 +401,7 @@ h1 {
 }
 
 .fb, .tw, .li, .go{
-	background:url(../../images/icon.png) no-repeat;
+	background:url(../images/icon.png) no-repeat;
 	height: 1px;
 	padding: 5px 13px;
 	width: 1px;
@@ -1016,6 +1016,15 @@ h1 {
 }
 .footer-links ul:nth-child(2){
 	width:100%;
+}
+.footer-links li {
+    font-size: 14px;
+	line-height: 22px;
+	padding:2px 0;
+}
+.footer-links li a {
+	font-size: 12px;
+	line-height: 22px;
 }
 
 }
