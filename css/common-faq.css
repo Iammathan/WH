@@ -714,15 +714,16 @@ input:focus, input.filled {
 
 /* Blog page design */
 #wh-blog{
-	min-width:1200px;
+	min-width:1100px;
 }
 
 .wh-blog-holder{
 	float:left;	
-	width:65%;
+	width:64%;
 }
+
 .blog-contacts{
-	width:24%;
+	width:23%;
 	float:left;
 	min-height:300px;
 	margin-left:4%;
@@ -746,14 +747,20 @@ input:focus, input.filled {
 	-ms-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
 	
 	margin-bottom:60px;
+	padding:40px;
 }
 
-.wh-blog,.wh-blog-part2,.command-container,.whBlog-replay-container{
+.wh-blog-part2{margin-top:30px;}
+.wh-blog,.command-container,.whBlog-replay-container{
 	padding:40px 40px 10px 40px;
 	border-bottom:1px dashed #ebebeb;
 	overflow:hidden;
 }
-.wh-blog-part2,.command-container,.whBlog-replay-container{
+.wh-blog{
+	padding:0;
+	padding-bottom:10px;
+	}
+.command-container,.whBlog-replay-container{
 	border-bottom:1px solid #ebebeb;
 	padding-bottom:40px;
 }
@@ -956,6 +963,24 @@ input, textarea{
 
 /* --------------------------------------Media query START---------------------------------------------------------------*/  
 
+@media screen and (max-width:1200px) {
+	#wh-blog {
+    	min-width: 940px;
+	}
+}
+
+@media screen and (max-width:1024px) {
+	#wh-blog {
+    	min-width: 92%;
+	}
+	.wh-blog-holder {
+    	width: 62%;
+	}
+}
+
+
+
+
 @media screen and (max-width:880px) {
 .section {
     max-width: 80%;
@@ -978,6 +1003,34 @@ input, textarea{
 	margin-left: 25%;
 	border-left: 2px solid #f2f2f2;
 }
+
+
+/* blog section */
+#wh-blog {
+    min-width: 85%;
+}
+.wh-blog-holder {
+    width: 100%;
+}
+
+.blog-contacts {
+	margin:0 auto;
+	float:none;
+    width: 100%;
+}
+
+
+.topic-holder{
+	width:100%;
+	overflow:hidden;
+	border-right:1px solid #ebebeb;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+	-ms-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
 
 @media screen and (max-width:780px) {
 h3,.cateSec {
@@ -1056,6 +1109,13 @@ h1 {
 	line-height: 22px;
 }
 
+
+.wh-blog h3 {
+	font-size:18px;
+	line-height:26px;
+}
+
+
 }
 
 @media screen and (max-width:480px) {
@@ -1068,7 +1128,7 @@ h1 {
 }
 p {
     font-size: 12px;
-    line-height: 20px;
+    line-height: 22px;
 }
 .question, .faq-categary li{
 	font-size: 14px;
