@@ -301,7 +301,7 @@ h2 .brand{
 
 /* self promot START */
 .self-promot{
-	margin: 30px auto 0;
+	margin:0 auto;
 	overflow:hidden;
 }
 .self-promot .pln-col{
@@ -312,11 +312,13 @@ h2 .brand{
 	
 }
 .pricing-pln{
-	margin: 10px 20px 0px 20px;
-	padding: 40px 40px 60px 40px;
+	margin: 9%;
+	padding: 15%;
 	text-align: center;
 	border: 1px solid #ebebeb;
 	border-radius: 2px;
+	min-height: 120px;
+	position:relative;
 }
 .price-inText {
 	color: #666;
@@ -382,9 +384,9 @@ h2 .brand{
 	border-left: 40px solid rgba(0, 0, 0, 0);
 	height: 0;
 	content:  " ";
-	right:20px;
 	position: absolute;
-	top:10px;
+	right: 0;
+    top: 0;
 	width: 0;
 	z-index:99;
 }
@@ -394,8 +396,8 @@ h2 .brand{
     font-size: 22px;
     font-weight: 600;
     position: absolute;
-    right: 38px;
-    top: 10px;
+    right: 20px;
+    top: 0;
     width: 0;
     z-index: 99;
 
@@ -404,11 +406,12 @@ h2 .brand{
 
 /* Webdesign Order your project START*/
 .webdesign-order-con{
-	margin:50px 0 0 20px;
+	margin: 50px 0 0;
+    overflow: hidden;
 }
 
 .webdesign-order{
-	width:750px;
+	width:64%;
 	border:1px solid #e1e1e1;
 	min-height:200px;
 	float:left;
@@ -452,32 +455,32 @@ h2 .brand{
 
 
 .orderTop{
-	padding:30px 0;
-	border-bottom:1px dashed #ebebeb;
-	overflow:hidden;
+	border-bottom: 1px dashed #ebebeb;
+    margin: 0 20px;
+    overflow: hidden;
+    padding: 30px 0;
 }
 
 .submitSection{
-	margin:30px 0 40px;
+	margin:30px;
 }
 
 .submitSection input,.submitSection textarea{
     border: 1px solid #e1e1e1;
-	//box-shadow: 0  0 0 1px rgba(0, 0, 0, 0.075) inset;
     display: block;
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 4px;
     outline: medium none;
     padding: 10px;
-    width: 300px;
+    width: 92%;
 	margin:12px 0 20px;
 	resize: none;
 	border-radius:2px;
 }
 
 .submitSection textarea{
-	width:665px;
+	width: 95%;
 	margin-bottom:0;
 	border-bottom:0;
 }
@@ -491,13 +494,12 @@ h2 .brand{
 
 .inputValue{
 	float: left;
-    margin-left: 30px;
-    width: 335px;
+    margin-left: 10px;
+    width: 48%;
 }
 
 .getQueryBox{
-	width:690px;
-	margin:0 auto;
+	margin-left: 10px;
 }
 
 .viewMore a,.viewMoreContect a{
@@ -513,7 +515,6 @@ h2 .brand{
 		padding: 8px 10px;
 		text-align: center;
 		text-transform: uppercase;
-		//border-radius: 2px;
 	}
 	
 .viewMoreContect{
@@ -528,56 +529,62 @@ h2 .brand{
 	.alignCenter{
 		text-align:center;
 		padding:30px 0;
-		
+		margin: 0 10px;
 	}
 /* Radio Button */
 
 
 input[type=radio].css-checkbox {
-							position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
-						}
+		position:absolute; 
+		z-index:-1000; 
+		left:-1000px; 
+		overflow: hidden; 
+		clip: rect(0 0 0 0); 
+		height:1px; 
+		width:1px; 
+		margin:-1px; 
+		padding:0; 
+		border:0;
+	}
 
-						input[type=radio].css-checkbox + label.css-label {
-							padding-left:25px;
-							height:16px; 
-							display:inline-block;
-							line-height:15px;
-							background-repeat:no-repeat;
-							background-position: 0 0;
-							vertical-align:middle;
-							cursor:pointer;
-							font-size:16px;
-							margin:20px 15px 0 15px;
-
-						}
-
-						input[type=radio].css-checkbox:checked + label.css-label {
-							background-position: 0 -16px;
-						}
-						label.css-label {
-				background-image:url(images/redio.png);
-				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-			
+	input[type=radio].css-checkbox + label.css-label {
+		padding-left:25px;
+		height:16px; 
+		display:inline-block;
+		line-height:15px;
+		background-repeat:no-repeat;
+		background-position: 0 0;
+		vertical-align:middle;
+		cursor:pointer;
+		font-size:16px;
+		margin:20px 15px 0 15px;
+	
+	}
+	
+	input[type=radio].css-checkbox:checked + label.css-label {
+		background-position: 0 -16px;
+	}
+	label.css-label {
+		background-image:url(images/redio.png);
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
 			/* Radio Button end */		
 			
 /* file upload START */
 
 .fileUpload {
 	position: relative;
-	overflow: hidden;
-    border:solid 1px #e1e1e1;
     vertical-align:top;
-	width:685px;
+	width: 97.9%;
 	margin-top:-5px;
-	border-bottom-left-radius: 1px;
-	border-bottom-right-radius: 1px;
-}
+	border-right: 1px solid #e1e1e1;
+	}
 .uploadBtn{
     display:inline-block;
     vertical-align:top;
@@ -587,7 +594,8 @@ input[type=radio].css-checkbox {
     height:25px;
     line-height:22px;
     color:#d4d4d4;
-	width:100%;
+	width: 97%;
+	border: 1px solid #e1e1e1;
 }
 
 .fileUpload input.upload {
@@ -698,13 +706,13 @@ input[type=radio].css-checkbox {
 }
 
 .webdesign-order-dec{
-	width:360px;
+	padding: 20px 25px;
+    width: 29%;
 	min-height:400px;
 	background:#fffff2;
 	border:1px solid #eeeec8;
 	float:left;
 	margin-left:20px;
-	padding:20px 15px;
 }
 .orderSm-title,.paidaddOn-container,paidaddOn-container,.free-container{
 	padding-bottom:20px;
@@ -812,14 +820,16 @@ input[type=radio].css-checkbox {
 }
 
 .emailtab{
-	float: left;
-	padding: 15px 92px;
-	color: #333;
-	font-size: 16px;
-	font-weight: 600;
 	border-bottom: 1px solid #efefef;
-	cursor: pointer;
-	margin-left: 5px;
+    color: #333;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 5px;
+    padding: 2% 4%;
+    text-align: center;
+    width: 41%;
 }
 
 .planActive{
@@ -932,26 +942,24 @@ padding: 0 0 3px;
 
 
 
-/* Footert part End */
-
-
+/*  FOOTER PART START*/
 .footer {
 	background: none repeat scroll 0 0 #f1f1f1;
-	border-top: 1px solid #e2e2e2;
+	border-top: 1px solid #e2e2e2
 }
 .footer-links {
 	border-bottom: 1px solid #E2E2E2;
 	margin: 0 auto;
 	max-width: 920px;
 	overflow: hidden;
-	padding: 60px 0 40px
+	padding: 50px 0 40px
 }
 .footer-links ul {
 	float: left;
 	overflow: hidden;
 	width: 32%;
 	padding-left:5%;
-	padding-bottom: 5%;
+	//padding-bottom:5%;
 }
 .footer-links ul:nth-child(3) {
 	float: left;
@@ -978,7 +986,7 @@ padding: 0 0 3px;
 }
 
 .fb, .tw, .li, .go{
-	background:url(images/icon.png) no-repeat;
+	background:url(../images/icon.png) no-repeat;
 	height: 1px;
 	padding: 5px 13px;
 	width: 1px;
@@ -1009,3 +1017,130 @@ padding: 0 0 3px;
 
 
 /* FOOTER PART END */
+
+/* Media query -----------STRAT  */
+
+@media only screen and (max-width : 1200px) {
+	.webdesign-order {
+		width: 63%;
+	}
+}
+
+@media only screen and (max-width : 1024px) {
+	
+	.webdesign-order {
+		width: 62%;
+	}
+	
+	.inputValue {
+		width: 47%;
+	}
+	.submitSection textarea {
+		width: 94%;
+	}
+	.fileUpload {
+		width: 96.9%;
+	}
+	
+}
+
+@media only screen and (max-width : 980px) {
+	.pricing-pln {
+		padding: 13%;
+		min-height: 130px;
+	}
+	.emailtab {
+		padding: 2% 3%;
+	}
+	.webdesign-order {
+   	 	width: 61%;
+	}
+	
+	.emailtab {
+		line-height: 22px;
+		font-size: 14px;    
+	}
+}
+
+@media only screen and (max-width : 860px) {
+	.self-promot .pln-col {
+		width: 50%;
+	}
+	.webdesign-order {
+		float: none;
+		margin: 0 auto;
+		width: 91%;
+	}
+	.webdesign-order-dec {
+		float: none;
+		margin: 40px auto 0;
+		width: 83%;
+	}
+}
+
+@media only screen and (max-width : 680px) {
+		/* footer section */
+	.footer-links ul:nth-child(2) {
+		width: 30%;
+	}
+	.footer-links ul:nth-child(3) {
+		width: 20%;
+	}
+
+}
+
+@media only screen and (max-width : 580px) {
+	.self-promot .pln-col {
+		width: 100%;
+	}
+	.webdesign-order-dec {
+		width:81%;
+	}
+	.inputValue {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.inputValue {
+    	width: 44%;
+	}
+	
+		/* footer section */
+	
+	.footer-links ul,.footer-links ul:nth-child(3){
+		float: none;
+    	margin: 0 auto;
+		width:100%;
+		margin-bottom:40px;
+		text-align:center;
+		padding-left: 0%;
+	}
+	.footer-links ul:nth-child(3){
+		margin-bottom:0px;
+	}
+	.footer-links ul:nth-child(2){
+		width:100%;
+	}
+
+}
+
+@media only screen and (max-width : 480px) {
+	.inputValue {
+		width: 95%;
+	}
+	.fileUpload {
+    	width: 92.9%;
+	}
+	.submitSection textarea {
+    	width: 90%;
+	}
+	.webdesign-order-dec {
+		width:78%;
+	}
+}
+@media only screen and (max-width : 380px) {
+	.webdesign-order-dec {
+		width:75%;
+	}
+}
+
+
