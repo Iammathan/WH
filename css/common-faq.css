@@ -980,13 +980,14 @@ input, textarea{
 
 .wh-blogTag{
 	border-top:1px solid #ebebeb;
-	padding-top:20px;
+	padding:20px 0;
 	margin-top:30px;
+	overflow:hidden;
 }
 
 .wh-blogTag li,.wh-pagination li{
 	float:left;
-	margin: 20px 10px 0 0;
+	margin: 20px 10px 10px 0;
 	
 } 
 .wh-blogTag li a,.wh-pagination li a{
